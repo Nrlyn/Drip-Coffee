@@ -1,0 +1,388 @@
+*{
+    font-family: Helvetica, sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+
+:root{
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255,255,255, .3);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--bg);
+    padding: 1rem;
+    border-bottom: var(--border);
+}
+
+.header {
+    height: 80px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg);
+    padding: 2.7rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; 
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+}
+
+.header .icons div {
+    flex-flow: row;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.navbar a{
+    margin: 0 1rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header .logo img{
+    height: 3.2rem;
+    width: auto;
+    margin-left: 5px;
+    margin-top: 3px;
+    border-radius: 50px;
+    border: 1px solid #fff;
+}
+
+.cart {
+    display: flex;
+    background-color: var(--bg);
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+}
+
+.fa-solid {
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+.cart p {
+    height: 22px;
+    width: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background-color: var(--bg);
+    color: white;
+}
+
+.box-content{
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.box-content h2{
+    font-size: 2.5rem;
+    color: #fff;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+.box-content h2 span{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+
+}
+
+.box-content h3{
+    color: var(--main-color);
+    padding: 1.5rem;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.box-content p{
+    font-size: 1.1rem;
+}
+
+.container {
+    display: flex;
+    width: 70%;
+    margin-top: 2rem;
+    margin-bottom: 50px;
+}
+
+#root {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.sidebar {
+    width: 40%;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-left: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+
+.head {
+    background-color: var(--main-color);
+    border-radius: 3px;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #333;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.img-box {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bottom {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+}
+
+.bottom p{
+    color: #eee;
+    font-size: 1.5rem;
+}
+
+.bottom h2 {
+    font-size: 20px;
+    color: var(--main-color);
+    font-size: 1rem;
+}
+
+button {
+    width: 100%;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    padding: 7px 25px;
+    cursor: pointer;
+    color: white;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid #aaa;
+    border-radius: 3px;
+    margin: 10px 10px;
+}
+
+.row-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rowing {
+    max-width: 43px;
+    max-height: 43px;
+    border-radius: 50px;
+}
+
+.fa-trash:hover {
+    cursor: pointer;
+    color: #333;
+}
+
+.footer {
+    background: var(--black);
+    text-align: center;
+    width: 100%;
+}
+
+.footer .share {
+    padding: 5px;
+}
+
+.footer .share a{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    color: #fff;
+    border: var(--border);
+    margin: 1rem;
+    border-radius: 50%;
+    border: 1px white solid;
+}
+
+.footer .share a:hover{
+    background-color: var(--main-color);
+    color: var(--black);
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.footer .links a {
+    padding: 1rem 1rem;
+    color:#fff;
+    border: var(--border);
+    font-size: 1rem;
+}
+
+.footer .links a:hover {
+    background-color: var(--main-color);
+    color: var(--black);
+}
+
+.footer .credit {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+.footer .credit span {
+    color: var(--main-color);
+}
+
+
+
+@media (max-width: 1000px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 80%;
+    }
+    
+    #root {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    
+    .sidebar {
+        width: 50%;
+        border-radius: 5px;
+        background-color: #eee;
+        margin-left: 20px;
+        padding: 15px;
+        text-align: center;
+    }
+    
+
+}
+
